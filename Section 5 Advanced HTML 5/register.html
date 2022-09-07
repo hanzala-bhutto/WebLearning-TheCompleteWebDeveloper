@@ -6,20 +6,20 @@
 </head>
 <body>
     <form method="GET">
-        First Name: <input type="text"><br>
-        Last Name: <input type="text"><br>
-        Email: <input type="email" required><br>
-        Password: <input type="password" required><br>
-        Birthday: <input type="date"><br>
+        First Name: <input type="text" name="FirstName"><br>
+        Last Name: <input type="text" name="LastName"><br>
+        Email: <input type="email"  name="Email" required><br>
+        Password: <input type="password"  name="Password" required><br>
+        Birthday: <input type="date" name="Birthday"><br>
         Gender:<br>
-        <input type="radio" name="gender">Male<br>
-        <input type="radio" name="gender">Female<br>
-        <input type="radio" name="gender">Other<br>
+        <input type="radio" name="Gender" value="Male">Male<br>
+        <input type="radio" name="Gender" value="Female">Female<br>
+        <input type="radio" name="Gender" value="Other">Other<br>
         Pets:<br>
-        <input type="checkbox">Dogs<br>
-        <input type="checkbox">Cats<br>
+        <input type="checkbox" name="Pet1" value="cat">Dogs<br>
+        <input type="checkbox" name="Pet2" value="dog">Cats<br>
         Cars:<br>
-        <select >
+        <select name="Car">
             <option value="volvo">Volvo</option>
             <option value="audi">Audi</option>
         </select><br>
