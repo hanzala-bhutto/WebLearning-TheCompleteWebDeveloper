@@ -4,9 +4,9 @@ body {
 }
 
 h2 {
-    color:red;
+    color: #AA4139;
     text-align: center;
-    border: 5px solid purple;
+    border: 5px solid rgba(255,176,170,0.5);
     cursor: pointer;
 }
 
