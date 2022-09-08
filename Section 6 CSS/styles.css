@@ -12,4 +12,5 @@ h2 {
 
 li {
     list-style: none;
+    display : inline-block;
 }
