@@ -1,3 +1,7 @@
+* {
+    text-align: center;
+}
+
 body {
     background-image: url(background_index.jpg);
     background-size: cover;    
