@@ -3,11 +3,15 @@ body {
     background-size: cover;    
 }
 
-h2 {
+h2 , p {
     color: #AA4139;
     text-align: center;
     border: 5px solid rgba(255,176,170,0.5);
     cursor: pointer;
+}
+
+p {
+    color: green;
 }
 
 li {
