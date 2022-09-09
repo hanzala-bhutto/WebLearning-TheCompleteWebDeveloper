@@ -23,11 +23,11 @@ li {
     display : inline-block;
 }
 
-#div1 {
+#div1 :last-child {
     background: rgba(0,0,255,0.2);
 }
 
-#div2 {
+#div2 :first-child {
     background: rgba(0,255,0,0.2);
 }
 
