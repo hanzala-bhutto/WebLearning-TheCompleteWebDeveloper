@@ -6,6 +6,18 @@ li {
     display : inline-block;
 }
 
+p {
+    font-size: 30px;
+}
+
+#span1 {
+    font-size: 3em;
+}
+
+#span2 {
+    font-size: 3rem;
+}
+
 .boxmodel {
     border: 5px solid red;
     display: inline-block;
