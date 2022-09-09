@@ -19,6 +19,18 @@ li {
     display : inline-block;
 }
 
+#div1 {
+    color: rgba(0,0,255,0.2);
+}
+
+#div1 {
+    color: rgba(0,255,0,0.2);
+}
+
+.active {
+    color : red;
+}
+
 .webtext {
     border: 5px dashed green;
 }
