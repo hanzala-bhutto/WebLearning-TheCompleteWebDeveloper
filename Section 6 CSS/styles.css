@@ -7,21 +7,29 @@ body {
     background-size: cover;    
 }
 
-h2 + p:hover {
+h2, p:hover {
     color: #AA4139;
     text-align: center;
     border: 5px solid rgba(255,176,170,0.5);
     cursor: pointer;
 }
 
+footer {
+    clear : both;
+}
+
+img {
+    float : right;
+}
+
 p {
-    line-height: 50px;
+    line-height: 5px;
     color: green ;
     /* text-decoration: line-through; */
     /* text-transform: uppercase; */
     font-style:italic;
     font-weight: bold;
-    font-size:180%;
+    font-size:100%;
     font-family: 'Roboto', sans-serif;
 }
 
