@@ -20,11 +20,11 @@ li {
 }
 
 #div1 {
-    color: rgba(0,0,255,0.2);
+    background: rgba(0,0,255,0.2);
 }
 
-#div1 {
-    color: rgba(0,255,0,0.2);
+#div2 {
+    background: rgba(0,255,0,0.2);
 }
 
 .active {
