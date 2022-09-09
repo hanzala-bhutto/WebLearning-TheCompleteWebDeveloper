@@ -1,3 +1,16 @@
 h2 {
-    color:red;
+    color:blue;
+}
+
+li { 
+    display : inline-block;
+}
+
+.boxmodel {
+    border: 5px solid red;
+    display: inline-block;
+    padding: 20px;
+    margin: 0px 20px;
+    width:33px;
+    height:55px;
 }
