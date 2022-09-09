@@ -15,7 +15,14 @@ h2 + p:hover {
 }
 
 p {
-    color: green !important;
+    line-height: 50px;
+    color: green ;
+    /* text-decoration: line-through; */
+    /* text-transform: uppercase; */
+    font-style:italic;
+    font-weight: bold;
+    font-size:180%;
+    font-family: Georgia, 'Times New Roman';
 }
 
 li {
