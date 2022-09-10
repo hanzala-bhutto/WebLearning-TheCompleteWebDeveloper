@@ -4,7 +4,17 @@
     justify-content: center;
 }
 
+.main_h1 {
+    font-family:Papyrus,fantasy;
+    font-size: 3em;
+    border-bottom: 2px solid pink; 
+    border-right: 2px solid pink;
+    width: 400px;
+    text-align: center; 
+}
+
 img {
     width:450px;
     height:300px;
+    margin:10px;
 }
