@@ -1,12 +1,14 @@
 .container {
     display:grid;
     gap:20px;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 1fr 1fr 1fr;
+
 }
 
 .zone {
     cursor:pointer;
-    display:inline-block;
+    /* display:inline-block; */
     text-align: center;
     font-size:10em;
     border-radius:4px;
