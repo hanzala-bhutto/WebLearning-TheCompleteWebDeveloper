@@ -6,6 +6,10 @@
 
 }
 
+.green {
+    grid-column:1/-1;
+}
+
 .zone {
     cursor:pointer;
     /* display:inline-block; */
