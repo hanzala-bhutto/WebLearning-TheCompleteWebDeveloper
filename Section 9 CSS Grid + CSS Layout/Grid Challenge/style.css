@@ -1,8 +1,30 @@
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+    margin:0;
+}
+
+.container{
+    /* height: 100%;    */
+    display:grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-rows: 2fr 10fr 15fr 1fr;
+}
+
+.green {
+    display:flex;
+    justify-content: start;
+    gap:30px;
+}
+
 .zone {
-    padding:30px 50px;
-    margin:40px 60px;
+    /* padding:30px 50px; */
+    /* margin:40px 60px; */
     cursor:pointer;
-    display:inline-block;
+    /* display:inline-block; */
     color:#FFF;
     font-size:2em;
     border-radius:4px;
@@ -16,6 +38,7 @@
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
+
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
