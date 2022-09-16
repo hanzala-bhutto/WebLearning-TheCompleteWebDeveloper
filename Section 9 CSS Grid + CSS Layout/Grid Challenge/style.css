@@ -84,7 +84,7 @@ a {
     background-color: black;
     padding:100px;
     margin:20px;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 .box:hover{
