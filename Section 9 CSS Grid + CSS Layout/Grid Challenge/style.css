@@ -26,10 +26,10 @@ body{
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
-/* NAV */
+/* nav started */
+
 .main-nav {
     display:flex;
-    /* justify-content: flex-start; */
     list-style: none;
     font-size:0.7em;
     margin:0;
@@ -54,13 +54,16 @@ a {
     color:white;
     text-decoration: none;
 }
+/* nav ended */
 
 
 
-.red {
+
+.red_container {
     display:flex;
     justify-content: center;
     align-items: center;
+    height:50vh;
     /* text-align: center; */
 }
 
