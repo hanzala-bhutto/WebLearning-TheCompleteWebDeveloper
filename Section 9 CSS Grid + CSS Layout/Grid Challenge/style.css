@@ -11,13 +11,34 @@ body{
     /* height: 100%;    */
     display:grid;
     grid-template-columns: repeat(auto-fill);
-    grid-template-rows: 2fr 10fr 15fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.red {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
 }
 
 .green {
     display:flex;
-    justify-content: start;
-    gap:30px;
+    justify-content: flex-start;
+    /* gap:30px; */
+}
+
+.green_p{
+    margin-left:20px;
+    font-size: 1.5rem;
+}
+
+.green_p4{
+    margin: auto;
+    margin-right:20px;
+}
+
+.yellow {
+    text-align: center;
 }
 
 .zone {
@@ -38,7 +59,35 @@ body{
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
+/* 
+img {
+    width:250px;
+    height:300px;
+    margin:10px;
+    transition: all 1s;
+} */
 
+.blue_img {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: center;
+    gap:10px;
+    transition: all 1s linear;
+}
+
+.subblue_img{
+    margin:10px;
+    width:100px;
+    height:100px;
+    padding: 100px;
+    background: black;
+}
+
+.subblue_img:hover {
+    cursor:pointer;
+    transform: scale(1.1);
+}
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
