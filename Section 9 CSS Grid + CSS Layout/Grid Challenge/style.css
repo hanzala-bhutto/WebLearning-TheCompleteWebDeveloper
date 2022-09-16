@@ -67,10 +67,7 @@ a {
 /*Cover*/
 
 
-.yellow {
-    text-align: center;
-}
-
+/* Project Grid */
 .grid-wrapper {
     display:grid;
     grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
@@ -90,6 +87,14 @@ a {
 .box:hover{
     transform: scale(1.05);
 }
+/* Project Grid */
+
+/* Footer */
+footer{
+    text-align: center;
+}
+/* Footer */
+
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
