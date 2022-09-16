@@ -51,9 +51,9 @@ a {
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
 /***********************************************************************
@@ -81,7 +81,7 @@ a {
 }
 
 .box {
-    background-color: #444;
+    background-color: black;
     padding: 130px;
     margin: 20px;
 }
