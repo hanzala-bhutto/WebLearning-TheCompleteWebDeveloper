@@ -77,9 +77,18 @@ a {
 }
 
 .box > img {
-    width:100% ;
-    /* height:100px; */
-    /* margin:10px; */
+    width:100%;
+}
+
+.box {
+    background-color: black;
+    padding:100px;
+    margin:20px;
+    transition: all .5s linear;
+}
+
+.box:hover{
+    transform: scale(1.05);
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
