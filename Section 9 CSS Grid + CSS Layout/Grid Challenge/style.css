@@ -21,20 +21,11 @@ body{
     /* text-align: center; */
 }
 
-.green {
+.main-nav {
     display:flex;
     justify-content: flex-start;
+    list-style: none;
     /* gap:30px; */
-}
-
-.green_p{
-    margin-left:20px;
-    font-size: 1.5rem;
-}
-
-.green_p4{
-    margin: auto;
-    margin-right:20px;
 }
 
 .yellow {
