@@ -5,5 +5,26 @@
 // 3. Prompts the user for the second number.
 // 4. stores that number and responds with the SUM by using an alert.  
 
+firstNumber = Number(prompt("Input first number: "));
+operator = prompt("Input the operator to apply:" );
+secondNumber = Number(prompt("Input second number: "));
+var result;
 
 // BONUS: Make a program that can subtract, multiply, and also divide!
+if (operator === "*"){
+    result = firstNumber*secondNumber;
+}
+else if (operator === "/"){
+    result = firstNumber/secondNumber;
+}
+else if (operator === "+"){
+    result = firstNumber+secondNumber;
+}
+else if (operator === "-"){
+    result = firstNumber-secondNumber;
+}
+else {
+    alert("Input any of the basic four operators +,-,*,/")
+}
+
+alert("The result is : " + result);
