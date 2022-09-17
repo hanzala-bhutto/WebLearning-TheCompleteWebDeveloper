@@ -24,3 +24,6 @@ false - true = -1
 "b" < "A" = false
 true === false = false
 true != true = false
+
+// Make the string: "Hi There! It's "sunny" out" by using the + sign:
+"Hi There It\'s \"sunny\" out"
