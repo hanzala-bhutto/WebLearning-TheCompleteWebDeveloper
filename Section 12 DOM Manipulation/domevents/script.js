@@ -36,6 +36,9 @@ function addListAfterKeypress(event) {
 
 function toggleDoneAfterClick(element){
 	if(element.target.className === "taskClass"){
+		element.target.classList.add("done");
+	}
+	else if(element.target.className === "taskClass done"){
 		element.target.classList.toggle("done");
 	}
 }
