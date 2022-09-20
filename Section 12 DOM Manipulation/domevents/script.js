@@ -1,4 +1,5 @@
 var button = document.getElementById("enter");
+var deleteButton = document.getElementById("delete1");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var li = document.querySelector("li");
@@ -13,6 +14,13 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = "";
+	createDeleteButton(li);
+}
+
+function createDeleteButton(li){
+	var button = document.createElement("button");
+	button.appendChild(document.createTextNode("delete"));
+	li.appendChild(button);
 }
 
 function addListAfterClick() {
@@ -31,8 +39,14 @@ function toggleDoneAfterClick(){
 	li.classList.toggle("done");
 }
 
+function deleteListElementAfterClick(){
+	deleteButton.parentElement.remove();
+}
+
 li.addEventListener("click", toggleDoneAfterClick);
 
 button.addEventListener("click", addListAfterClick);
+
+deleteButton.addEventListener("click", deleteListElementAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
