@@ -7,10 +7,6 @@ function setGradient(){
     body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 }
 
-color1.addEventListener("input", function(){
-    setGradient();
-})
+color1.addEventListener("input",setGradient);
 
-color2.addEventListener("input", function(){
-    setGradient();
-})
+color2.addEventListener("input", setGradient);
