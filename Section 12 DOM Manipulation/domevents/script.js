@@ -1,26 +1,25 @@
 var button = document.getElementById("enter");
-var deleteButton = document.getElementById("delete1");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var li = document.querySelector("li");
-li.classList.add("done");
+// var li = document.querySelector("li");
+// li.classList.add("done");
 
 function inputLength() {
 	return input.value.length;
 }
 
 function createListElement() {
+	var div = document.createElement("div");
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
-	ul.appendChild(li);
+	var deleteButton = document.createElement("button");
+	div.classList.add("wrapper");
+	ul.appendChild(div);
+	div.append(li,deleteButton);
+	li.classList.add("taskClass");
+	li.appendChild(document.createTextNode(input.value));	
 	input.value = "";
-	createDeleteButton(li);
-}
-
-function createDeleteButton(li){
-	var button = document.createElement("button");
-	button.appendChild(document.createTextNode("delete"));
-	li.appendChild(button);
+	deleteButton.classList.add("deleteClass");
+	deleteButton.innerHTML="delete";
 }
 
 function addListAfterClick() {
@@ -35,18 +34,26 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function toggleDoneAfterClick(){
-	li.classList.toggle("done");
+function toggleDoneAfterClick(element){
+	if(element.target.className === "taskClass"){
+		element.target.classList.toggle("done");
+	}
 }
 
-function deleteListElementAfterClick(){
-	deleteButton.parentElement.remove();
+function deleteListElementAfterClick(element){
+	if(element.target.className === "deleteClass"){
+		element.target.parentElement.remove();
+	}
 }
 
-li.addEventListener("click", toggleDoneAfterClick);
+function handleUIClick(element){
+	toggleDoneAfterClick(element);
+	deleteListElementAfterClick(element);
+}
+
+
+ul.addEventListener("click", handleUIClick);
 
 button.addEventListener("click", addListAfterClick);
-
-deleteButton.addEventListener("click", deleteListElementAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
