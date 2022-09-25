@@ -5,6 +5,9 @@ const startLine = '     ||<- Start line';
 let turtle = '🐢';
 let rabbit = '🐇';
 
+turtle = turtle.padStart(9);
+rabbit = rabbit.padStart(9);
+
 // it should look like this:
 '     ||<- Start line'
 '       🐢'
@@ -19,7 +22,11 @@ console.log(rabbit);
 // #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
 // Read about what the second parameter does in padEnd and padStart
 turtle = turtle.trim().padEnd(9, '=');
+console.log(turtle);
 
+'     ||<- Start line'
+'🐢======='
+'       🐇'
 
 // #3) Get the below object to go from:
 let obj = {
@@ -29,3 +36,16 @@ let obj = {
 }
 // to this:
 'my name is Rudolf the raindeer'
+
+objReduce = Object.entries(obj).reduce((accumulator,value) => {
+  return accumulator + value[0] + " " + value[1] + " "
+},"")
+console.log(objReduce)
+
+// or
+
+objJoin = Object.entries(obj).map(value => {
+  return value.join(" ")
+}).join(' ');
+
+console.log(objJoin)

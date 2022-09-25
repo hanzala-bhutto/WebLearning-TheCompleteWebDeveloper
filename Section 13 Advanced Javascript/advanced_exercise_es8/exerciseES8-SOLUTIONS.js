@@ -10,14 +10,16 @@ let rabbit = '🐇';
 '       🐢'
 '       🐇'
 
-// when you do:
-console.log(startLine);
-console.log(turtle);
-console.log(rabbit);
 
 
 turtle = turtle.padStart(8);
 rabbit = rabbit.padStart(8);
+
+
+// when you do:
+console.log(startLine);
+console.log(turtle);
+console.log(rabbit);
 
 
 // #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
