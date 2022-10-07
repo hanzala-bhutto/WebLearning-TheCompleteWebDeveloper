@@ -5,16 +5,14 @@ import Card from './Card';
 // destructures robots from properties to use it inside the map function
 const CardList = ({robots}) => {
 
-    // create a list of card components consisting of name,email for each robot
-    const cardsArray = robots.map((robot,i) => {
-        return <Card key={i} id={robot.id} name = {robot.name} email={robot.email}/>
-    }) 
-
     // return the cardlist
     return (
         <div>
         { 
-            cardsArray
+            // create a list of card components consisting of name,email for each robot
+            robots.map((robot,i) => {
+                return <Card key={i} id={robot.id} name = {robot.name} email={robot.email}/>
+            }) 
         }   
         </div>
     )
