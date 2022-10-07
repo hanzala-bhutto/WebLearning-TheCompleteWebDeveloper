@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-import Hello from './Hello';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import Card from './Card';
+import {robots} from './robots';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
-    <Hello greeting = {"Hello "+"ReactNinja"}/>
+  <div>
+    { robots.map((robot) => {
+        return <Card id={robot.id} name = {robot.name} email={robot.email}/>
+      })
+    }   
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

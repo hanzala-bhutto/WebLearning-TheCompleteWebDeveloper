@@ -1,6 +1,6 @@
 import React from "react";
 
-const card = (props) => {
+const Card = (props) => {
     // destructuring
     const {id,name,email} = props;
     return (
@@ -15,4 +15,4 @@ const card = (props) => {
     );
 }
 
-return card;
+export default Card;
