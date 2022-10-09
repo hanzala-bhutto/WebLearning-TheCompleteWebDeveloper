@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import {robots} from './robots';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-
+import Scroll from './Scroll';
 
 // Concepts of Life Cycle Hooks
 // Mounting
@@ -54,7 +54,9 @@ class App extends Component{
                 <div className='tc'>
                     <h1 className='f1'>RoboFriends</h1>
                     <SearchBox searchChange={this.onSearchChange}/> 
-                    <CardList robots={filteredRobots}/>
+                    <Scroll>
+                        <CardList robots={filteredRobots}/>
+                    </Scroll>
                 </div>
             )
         }
