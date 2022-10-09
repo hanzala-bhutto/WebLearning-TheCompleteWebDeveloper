@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import {robots} from './robots';
-import CardList from './CardList';
-import SearchBox from './SearchBox';
-import Scroll from './Scroll';
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll';
 
 // Concepts of Life Cycle Hooks
 // Mounting
@@ -36,11 +36,12 @@ class App extends Component{
 
     render(){
         // filter state property robots using searchfield value taken from event input value 
-        const filteredRobots = this.state.robots.filter((robot) => {
-            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const {robots, searchfield} = this.state;
+        const filteredRobots = robots.filter((robot) => {
+            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
 
-        if (this.state.robots.length === 0){
+        if (robots.length === 0){
             return (
                 <div className='container'>
                     <h1 className='f1'>Loading ...</h1>
