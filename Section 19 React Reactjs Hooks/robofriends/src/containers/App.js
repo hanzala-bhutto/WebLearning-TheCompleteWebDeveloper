@@ -41,17 +41,15 @@ class App extends Component{
             return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
 
-        if (robots.length === 0){
-            return (
-                <div className='container'>
+        return robots.length === 0 ?
+        (<div className='container'>
                     <h1 className='f1'>Loading ...</h1>
                 </div>
-          )
-        }
-        else{
+        ) 
+        :  
             // communicate OnSeachChange method to SearchBox
             // communicate filterRobots to CardList
-            return (
+            (
                 <div className='tc'>
                     <h1 className='f1'>RoboFriends</h1>
                     <SearchBox searchChange={this.onSearchChange}/> 
@@ -60,7 +58,6 @@ class App extends Component{
                     </Scroll>
                 </div>
             )
-        }
 
 
     }
