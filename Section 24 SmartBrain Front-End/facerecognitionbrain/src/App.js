@@ -10,8 +10,8 @@ class App extends Component {
       <div>
         <Navigation />
         <Logo />
-        <ImageLinkForm />
         <Rank />
+        <ImageLinkForm />
         {/* <FaceRecognition /> */}
       </div>
     )
