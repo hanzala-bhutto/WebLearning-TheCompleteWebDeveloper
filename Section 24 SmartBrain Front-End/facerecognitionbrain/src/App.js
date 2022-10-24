@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ParticlesBg from 'particles-bg';
 import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
@@ -13,6 +14,7 @@ class App extends Component {
         <Rank />
         <ImageLinkForm />
         {/* <FaceRecognition /> */}
+        <ParticlesBg color="#ffffff" num={100} alpha={[0.9, 0]} type="cobweb" bg={true} />
       </div>
     )
   }
