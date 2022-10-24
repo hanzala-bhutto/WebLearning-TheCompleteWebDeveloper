@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        {/* <Logo />
-        <ImageLinkForm />
+        {/* <Logo /> */}
+        {/*<ImageLinkForm />
         <FaceRecognition /> */}
       </div>
     )
