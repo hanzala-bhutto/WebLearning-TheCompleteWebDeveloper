@@ -10,6 +10,19 @@
     background-size: 40px 60px;
 }
 
-.meow{
-    font-size: 100px;
+@media only screen and (max-width: 700px) {
+    .form {
+      width: 600px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .form {
+      width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .form {
+      width: 400px;
+    }
 }
