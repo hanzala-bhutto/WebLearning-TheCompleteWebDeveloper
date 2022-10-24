@@ -1,9 +1,8 @@
-// import logo from './logo.svg';
-// import './App.css';
 import { Component } from "react";
 import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
+import Rank from './Components/Rank/Rank';
 
 class App extends Component {
   render() {
@@ -12,6 +11,7 @@ class App extends Component {
         <Navigation />
         <Logo />
         <ImageLinkForm />
+        <Rank />
         {/* <FaceRecognition /> */}
       </div>
     )
