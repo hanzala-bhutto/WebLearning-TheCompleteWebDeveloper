@@ -22,6 +22,11 @@ class App extends Component {
     };
   }
 
+  calculateFaceLocation = (data) => {
+    console.log(data);
+    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+  }
+
   onInputChange = (event) => {
     this.setState({input: event.target.value});
   }
@@ -31,11 +36,10 @@ class App extends Component {
     app.models.predict(Clarifai.FACE_DETECT_MODEL,
     this.state.input)
     .then(response => {
-      console.log('hi', response)
-    },
-    function(err){
-      console.log(err);
-    });
+      // console.log('hi', response)
+      this.calculateFaceLocation(response);
+    })
+    .catch(err => console.log(err))
   }
 
   render() {
