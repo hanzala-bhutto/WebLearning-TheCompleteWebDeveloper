@@ -2,6 +2,7 @@ import { Component } from "react";
 import ParticlesBg from 'particles-bg';
 import Clarifai from 'clarifai';
 import Navigation from './Components/Navigation/Navigation';
+import Signin from './Components/Signin/Signin';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
@@ -58,6 +59,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
+        <Signin />
         <Logo />
         <Rank />
         <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
