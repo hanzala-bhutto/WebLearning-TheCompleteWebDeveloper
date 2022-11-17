@@ -54,6 +54,21 @@ app.get('/profile/:id', (req,res) => {
     }
 })
 
+app.put('/image', (req,res) => {
+    const {id} = req.body;
+    let idFound = false;
+    database.users.forEach(user => {
+        if(user.id === id){
+            idFound=true;
+            user.entries++;
+            return res.json(user);
+        }
+    })
+    if(!idFound){
+        res.status(400).json("user not found!");
+    }
+})
+
 app.post('/register', (req,res) => {
     
     const {name,email,password} = req.body;
