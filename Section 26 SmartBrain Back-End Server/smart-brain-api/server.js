@@ -40,12 +40,26 @@ app.post('/signin', (req,res) => {
     }
 })
 
+app.get('/profile/:id', (req,res) => {
+    const {id} = req.params;
+    let idFound = false;
+    database.users.forEach(user => {
+        if(user.id === id){
+            idFound=true;
+            return res.json(user);
+        }
+    })
+    if(!idFound){
+        res.status(400).json("user not found!");
+    }
+})
+
 app.post('/register', (req,res) => {
     
     const {name,email,password} = req.body;
     database.users.push(
     {
-        id : 125,
+        id : '125',
         name:name,
         email:email,
         password: password,
@@ -53,8 +67,8 @@ app.post('/register', (req,res) => {
         joined: new Date()
     }
     )
-    res.send("registered");
-
+    // res.send("registered");
+    res.json(database.users[database.users.length-1]);
 })
 
 app.listen(3000, ()=>{
@@ -63,6 +77,8 @@ app.listen(3000, ()=>{
 
 /*
 res = this is working
-signin = post
-register = post
+signin --> post
+register --> post = user
+/profile/:userId --> GET = user
+/image --> Put --> user
 */
