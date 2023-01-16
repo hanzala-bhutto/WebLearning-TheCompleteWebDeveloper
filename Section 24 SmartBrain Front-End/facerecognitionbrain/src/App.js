@@ -84,7 +84,6 @@ class App extends Component {
           type: 'visual-detector',
         }, this.state.input)
       .then(response => {
-        console.log('hi', response)
         if (response) {
           fetch('http://localhost:3000/image', {
             method: 'put',
