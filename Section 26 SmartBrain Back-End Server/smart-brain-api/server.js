@@ -65,9 +65,6 @@ app.get('/profile/:id', (req,res) => {
     }
 })
 
-
-
-
 app.put('/image', (req,res) => {
     const {id} = req.body;
     let idFound = false;
@@ -75,7 +72,7 @@ app.put('/image', (req,res) => {
         if(user.id === id){
             idFound=true;
             user.entries++;
-            return res.json(user);
+            return res.json(user.entries);
         }
     })
     if(!idFound){
@@ -103,7 +100,7 @@ app.post('/register', (req,res) => {
     res.json(database.users[database.users.length-1]);
 })
 
-app.listen(3001, ()=>{
+app.listen(3000, ()=>{
     console.log("App is running");
 })
 
