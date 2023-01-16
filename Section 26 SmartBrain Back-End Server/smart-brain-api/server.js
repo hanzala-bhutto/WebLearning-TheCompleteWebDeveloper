@@ -71,16 +71,18 @@ app.post('/signin', (req,res) => {
 
 app.get('/profile/:id', (req,res) => {
     const {id} = req.params;
-    let idFound = false;
-    database.users.forEach(user => {
-        if(user.id === id){
-            idFound=true;
-            return res.json(user);
+    db.select('*').from('users').where({id:id})
+    .then(user => {
+        if (user.length){
+            res.json(user[0]);
+        }
+        else{
+            res.status(400).json("user not found!");
         }
     })
-    if(!idFound){
-        res.status(400).json("user not found!");
-    }
+    .catch(err => {
+        res.status(400).json("error getting user!");
+    })
 })
 
 app.put('/image', (req,res) => {
