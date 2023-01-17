@@ -34,11 +34,11 @@ class App extends Component {
     };
   }
 
-  componentDidMount(){
-    fetch("http://localhost:3000")
-    .then(response => response.json())
-    .then(console.log);
-  }
+  // componentDidMount(){
+  //   fetch("http://localhost:3000")
+  //   .then(response => response.json())
+  //   .then(console.log);
+  // }
 
   loadUser = (userData) => {
     this.setState({user: {
