@@ -5,6 +5,23 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from './ErrorBoundary';
 
+import { connect } from 'react-redux';
+import { setSearchField } from '../actions';
+
+const mapStateToProps = (state) => {
+    return {
+        searchField : state.searchField
+    }
+}
+
+const dispatchStateToProps = (dispatch) => {
+    return {
+        onSearchChange : (event) => {
+            dispatch(setSearchField(event.target.value));
+        }
+    }
+}
+
 // Concepts of Life Cycle Hooks
 // Mounting
 // Updating
@@ -15,8 +32,7 @@ class App extends Component{
     constructor(){
         super();
         this.state = {
-            robots : [],
-            searchfield : ''
+            robots : []
         }
     }
 
@@ -29,17 +45,12 @@ class App extends Component{
         .then(users=> this.setState({robots:users}));
     }
 
-    // whenever creating custom method, use arrow function to properly indicate where is the event taking place
-    onSearchChange = (event) => {
-        // update state property searhfield
-        this.setState({searchfield : event.target.value});
-    }
-
     render(){
         // filter state property robots using searchfield value taken from event input value 
-        const {robots, searchfield} = this.state;
+        const {robots} = this.state;
+        const {searchField, onSearchChange} = this.props;
         const filteredRobots = robots.filter((robot) => {
-            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+            return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
 
         return robots.length === 0 ?
@@ -53,7 +64,7 @@ class App extends Component{
             (
                 <div className='tc'>
                     <h1 className='f1'>RoboFriends</h1>
-                    <SearchBox searchChange={this.onSearchChange}/> 
+                    <SearchBox searchChange={onSearchChange}/> 
                     <Scroll>
                         <ErrorBoundary>
                             <CardList robots={filteredRobots}/>
@@ -66,4 +77,4 @@ class App extends Component{
     }
 }
 
-export default App;
+export default connect(mapStateToProps,dispatchStateToProps)(App);
