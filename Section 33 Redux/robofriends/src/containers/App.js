@@ -5,11 +5,14 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from './ErrorBoundary';
 import { connect } from 'react-redux';
-import { setSearchField } from '../actions';
+import {requestRobots, setSearchField } from '../actions';
 
 const mapStateToProps = (state) => {
     return {
-        searchField : state.searchField
+        searchField : state.searchRobots.searchField,
+        robots : state.requestRobots.robots,
+        isPending : state.requestRobots.isPending,
+        error : state.requestRobots.error
     }
 }
 
@@ -17,6 +20,9 @@ const dispatchStateToProps = (dispatch) => {
     return {
         onSearchChange : (event) => {
             dispatch(setSearchField(event.target.value));
+        },
+        onRequestRobots : () => {
+            dispatch(requestRobots())
         }
     }
 }
@@ -28,31 +34,21 @@ const dispatchStateToProps = (dispatch) => {
 
 class App extends Component{
 
-    constructor(){
-        super();
-        this.state = {
-            robots : []
-        }
-    }
-
     // Mounting
     // Using jsonplaceholder api endpoint to get json data of 10 users
     // If application has started then change the state of robots field
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users=> this.setState({robots:users}));
+        this.props.onRequestRobots();
     }
 
     render(){
         // filter state property robots using searchfield value taken from event input value 
-        const {robots} = this.state;
-        const {searchField, onSearchChange} = this.props;
+        const {searchField, onSearchChange, robots,isPending} = this.props;
         const filteredRobots = robots.filter((robot) => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
 
-        return robots.length === 0 ?
+        return isPending ?
         (<div className='container'>
                     <h1 className='f1'>Loading ...</h1>
                 </div>
