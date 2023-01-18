@@ -7,9 +7,11 @@ import App from './containers/App';
 import './containers/App.css';
 import { searchRobots } from './reducers';
 import { Provider } from 'react-redux';
-import {createStore} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
+import { createLogger } from 'redux-logger';
 
-const store = createStore(searchRobots);
+const logger = createLogger();
+const store = createStore(searchRobots,applyMiddleware(logger));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
